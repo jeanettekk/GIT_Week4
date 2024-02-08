@@ -4,6 +4,7 @@ country_capitals = {'Australia': 'Canberra', 'Eire': 'Dublin',
                     'France': 'Paris', 'Finland': 'Helsinki',
                     'UK': 'London', 'US': 'Washington'}
 
+# Another way to construct a dictionary
 alternate_country_capitals = dict(Hungary='Budapest', Sweden='Stockholm')
 
 print(f"Country Capital Dictionary: {country_capitals}")
@@ -51,7 +52,7 @@ print(f"Removed item: {removed_item}")
 # key error
 # removed_item = country_cities.pop('DE')
 
-# clear the dictionary
+# clear the dictionary, an empty dictionary
 country_cities.clear()
 print(f"Country Cities Dictionary: {country_cities}")
 
@@ -66,13 +67,14 @@ for k, v in fruit.items():
 for k, v in vegetables.items():
     print(k, v)
 
+# update method, pass one dictionary to another dictionary, merge dictionaries
 fruit.update(vegetables)
 
 for k, v in fruit.items():
     print(k, v)
 
 
-# as a tuple
+# as a tuple, with a key-value
 for kv in vegetables.items():
     print(kv)
 
@@ -80,6 +82,6 @@ for kv in vegetables.items():
 veggies_list = list(vegetables.values())
 print(veggies_list)
 
-# see keys in either dictionary using | operator
+# see keys in either dictionary using | all / union operator
 all_keys = fruit.keys() | vegetables.keys()
 print(all_keys)
